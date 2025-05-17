@@ -76,9 +76,9 @@ const ContactSection = () => {
             </div>
 
             <div className="space-y-6">
-              {[{ icon: <Mail />, text: "yourname@example.com" },
+              {[{ icon: <Mail />, text: "shawmi3030@gmail.com" },
                 { icon: <Phone />, text: "+1 (123) 456-7890" },
-                { icon: <MapPin />, text: "San Francisco, California" }].map((item, idx) => (
+                { icon: <MapPin />, text: "Jaffna, Srilanka" }].map((item, idx) => (
                 <motion.div key={idx} whileHover={{ scale: 1.05 }} className="flex items-center space-x-3 text-muted-foreground">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full relative">
                     <span className="absolute inset-0 rounded-full blur-sm bg-blue-500 opacity-30"></span>

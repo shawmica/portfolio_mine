@@ -6,45 +6,63 @@ import { motion, AnimatePresence } from "framer-motion";
 interface Technology {
   name: string;
   icon: string;
-  category: "frontend" | "backend" | "design" | "other";
+  category: "frontend" | "backend" | "design" | "other" | "language";
 }
 
 const technologies: Technology[] = [
-  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", category: "frontend" },
-  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", category: "frontend" },
-  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", category: "frontend" },
+  // Frontend
   { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", category: "frontend" },
-  { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", category: "frontend" },
-  { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", category: "frontend" },
-  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", category: "backend" },
-  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", category: "backend" },
-  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", category: "backend" },
-  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", category: "backend" },
-  { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", category: "design" },
-  { name: "Adobe XD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg", category: "design" },
-  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", category: "other" },
-  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", category: "other" },
-  { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", category: "other" },
-];
+  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", category: "frontend" },
+  { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg", category: "frontend" },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", category: "frontend" },
+  { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", category: "frontend" },
 
-const categoryLabels = {
+  // Backend
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "backend" },
+  { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", category: "backend" },
+  { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", category: "backend" },
+  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", category: "backend" },
+
+  // API & Testing
+ { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", category: "other" },
+
+  // DevOps & Cloud
+  { name: "Microsoft Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg", category: "other" },
+
+  // UI/UX Design
+  { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", category: "design" },
+
+  // Tools & Version Control
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", category: "other" },
+  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", category: "other" },
+  { name: "Qt Creator", icon: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg", category: "other" },
+
+  // Languages
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "language" },
+  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", category: "language" },
+  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", category: "language" },
+  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", category: "language" },
+  ];
+
+const categoryLabels: Record<Technology["category"], string> = {
   frontend: "Frontend Development",
   backend: "Backend Development",
   design: "UI/UX Design",
   other: "DevOps & Tools",
+  language: "Languages",
 };
 
 const SkillsSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<"all" | Technology["category"]>("all");
 
-  const filteredTechnologies = selectedCategory === "all"
-    ? technologies
-    : technologies.filter(tech => tech.category === selectedCategory);
+  const filteredTechnologies =
+    selectedCategory === "all"
+      ? technologies
+      : technologies.filter((tech) => tech.category === selectedCategory);
 
   return (
     <section id="skills" className="py-16 scroll-mt-16 bg-muted/30">
       <div className="container">
-
         <motion.h2
           className="text-3xl font-bold tracking-tight mb-8"
           initial={{ opacity: 0, y: -20 }}
@@ -62,15 +80,19 @@ const SkillsSection = () => {
         >
           <Badge
             onClick={() => setSelectedCategory("all")}
-            className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${selectedCategory === "all" ? "bg-primary" : "bg-secondary"}`}
+            className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${
+              selectedCategory === "all" ? "bg-primary" : "bg-secondary"
+            }`}
           >
             All
           </Badge>
           {Object.entries(categoryLabels).map(([key, label]) => (
             <Badge
               key={key}
-              onClick={() => setSelectedCategory(key)}
-              className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${selectedCategory === key ? "bg-primary" : "bg-secondary"}`}
+              onClick={() => setSelectedCategory(key as Technology["category"])}
+              className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${
+                selectedCategory === key ? "bg-primary" : "bg-secondary"
+              }`}
             >
               {label}
             </Badge>

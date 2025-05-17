@@ -23,22 +23,19 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <p>
-              I'm a full-stack developer with a passion for creating beautiful, functional web applications. 
-              With over X years of experience, I've worked on projects from small websites to enterprise systems.
-            </p>
+              I am a third-year IT undergraduate at Rajarata University of Sri Lanka, passionate about using technology to solve real-world problems. My interests span Software Engineering, Full-Stack Web Development, Cloud Computing, Artificial Intelligence (AI), Machine Learning (ML), and Computer Vision. I enjoy building practical solutions and exploring emerging technologies that create impact. </p>
             <p>
-              My journey began in college and I’ve been solving problems and building products ever since.
-            </p>
-            <p>
-              Outside of coding, I enjoy hiking, reading, and exploring new tech.
-            </p>
+             Throughout my journey, I have gained strong hands-on experience in technologies like Python, Java, C, C++, JavaScript, TypeScript, React, Shadcn UI, Bootstrap, HTML, CSS, Axios, Django, and Django REST Framework. I am skilled in building secure and scalable applications using Microsoft Azure and JWT Authentication. My work in AI and Computer Vision includes projects involving OpenCV, Pycaw, Matplotlib, and image analysis techniques.
+
+I am also passionate about UI/UX design and have worked on user-centered interface designs using Figma, ensuring meaningful digital experiences. In addition to technical expertise, I have developed strong skills in Agile Project Management, team collaboration, problem-solving, and ethical technology practices. </p>
+            
           </motion.div>
 
           <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { icon: <Code className="h-10 w-10 mb-4 text-primary" />, title: "Frontend Development", skills: "React, Next.js, TailwindCSS, TypeScript", delay: 0.2 },
-              { icon: <Database className="h-10 w-10 mb-4 text-primary" />, title: "Backend Development", skills: "Node.js, Express, PostgreSQL, MongoDB", delay: 0.3 },
-              { icon: <Layout className="h-10 w-10 mb-4 text-primary" />, title: "UI/UX Design", skills: "Figma, Adobe XD, User Testing, Accessibility", delay: 0.4, colSpan: true },
+              { icon: <Code className="h-10 w-10 mb-4 text-primary" />, title: "Frontend Development", delay: 0.2 },
+              { icon: <Database className="h-10 w-10 mb-4 text-primary" />, title: "Backend Development", delay: 0.3 },
+              { icon: <Layout className="h-10 w-10 mb-4 text-primary" />, title: " Artificial Intelligence, Machine Learning, Computer Vision",  delay: 0.4, colSpan: true },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -53,7 +50,7 @@ const AboutSection = () => {
                   <CardContent className="p-6 flex flex-col items-center text-center">
                     {item.icon}
                     <h3 className="text-xl font-medium mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.skills}</p>
+                    
                   </CardContent>
                 </Card>
               </motion.div>

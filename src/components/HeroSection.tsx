@@ -11,7 +11,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
     <section id={id} className="py-20 md:py-28">
       <div className="container">
         <div className="grid gap-12 md:grid-cols-2 items-center">
-          
+
           {/* Left Content */}
           <motion.div
             className="space-y-6 order-2 md:order-1"
@@ -25,7 +25,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Hi, I'm <span className="text-gradient-primary">Your Name</span>
+              Hi, I'm <span className="text-gradient-primary">Shawmica Sivatharan</span>
             </motion.h1>
 
             <motion.p
@@ -34,7 +34,8 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              A passionate full-stack developer building elegant, performant, and user-friendly applications.
+              I am an enthusiastic learner with a strong interest in Artificial Intelligence (AI),
+        Machine Learning (ML), Digital Image Processing, and Computer Vision.
             </motion.p>
 
             <motion.div
@@ -55,22 +56,22 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             </motion.div>
           </motion.div>
 
-          {/* Right Image */}
+          {/* Right Image - Smaller with Blue Glow */}
           <motion.div
             className="order-1 md:order-2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+            <div className="aspect-square max-w-xs mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-[0_0_25px_rgba(0,191,255,0.6)]">
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800"
+                src="..\src\img\profile.jpg"
                 alt="Developer Profile"
                 className="w-full h-full object-cover"
               />
             </div>
           </motion.div>
-          
+
         </div>
       </div>
     </section>
