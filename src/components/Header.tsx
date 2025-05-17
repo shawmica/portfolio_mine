@@ -40,25 +40,45 @@ const Header = () => {
   ];
 
   return (
-    <header className="border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-blur:bg-background/60">
+    <header className="border-b sticky top-0 z-50 w-full bg-background">
       <div className="container flex h-16 items-center justify-between">
-        
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
+
+        {/* Logo */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4 }}
+        >
           <Link to="/" className="text-xl font-bold tracking-tight">
             Portfolio
           </Link>
         </motion.div>
 
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        {/* Mobile menu button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
 
-        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="hidden md:block">
+        {/* Desktop Menu */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="hidden md:block"
+        >
           <NavigationMenu>
             <NavigationMenuList>
               {menuItems.map((item) => (
                 <NavigationMenuItem key={item.id}>
-                  <button onClick={() => scrollToSection(item.id)} className={navigationMenuTriggerStyle()}>
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className={navigationMenuTriggerStyle()}
+                  >
                     {item.label}
                   </button>
                 </NavigationMenuItem>
@@ -67,6 +87,7 @@ const Header = () => {
           </NavigationMenu>
         </motion.div>
 
+        {/* Mobile menu content */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -75,11 +96,15 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 top-16 z-50 bg-background p-6 md:hidden"
+              className="fixed inset-0 top-16 z-50 w-full h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 text-foreground p-6 md:hidden overflow-y-auto"
             >
               <nav className="flex flex-col space-y-4">
                 {menuItems.map((item) => (
-                  <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-lg font-medium hover:text-primary">
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="text-lg font-medium hover:text-primary text-left"
+                  >
                     {item.label}
                   </button>
                 ))}
@@ -88,9 +113,20 @@ const Header = () => {
           )}
         </AnimatePresence>
 
+        {/* Theme toggle */}
         {mounted && (
-          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="ml-auto md:ml-0">
-            <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")} aria-label="Toggle theme">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="ml-auto md:ml-0"
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              aria-label="Toggle theme"
+            >
               {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
           </motion.div>
