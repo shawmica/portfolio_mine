@@ -40,7 +40,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="border-b sticky top-0 z-50 w-full bg-background">
+    <header className="border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-blur:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
 
         {/* Logo */}
@@ -54,7 +54,7 @@ const Header = () => {
           </Link>
         </motion.div>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu toggle */}
         <Button
           variant="ghost"
           size="icon"
@@ -64,7 +64,7 @@ const Header = () => {
           {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
 
-        {/* Desktop Menu */}
+        {/* Desktop menu */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ const Header = () => {
           </NavigationMenu>
         </motion.div>
 
-        {/* Mobile menu content */}
+        {/* Mobile menu dropdown */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -96,7 +96,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 top-16 z-50 w-full h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 text-foreground p-6 md:hidden overflow-y-auto"
+              className="absolute top-16 left-0 right-0 z-50 w-full bg-white dark:bg-gray-900 text-foreground p-6 shadow-md md:hidden"
             >
               <nav className="flex flex-col space-y-4">
                 {menuItems.map((item) => (
@@ -127,7 +127,11 @@ const Header = () => {
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               aria-label="Toggle theme"
             >
-              {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+              {theme === "light" ? (
+                <Moon className="h-5 w-5" />
+              ) : (
+                <Sun className="h-5 w-5" />
+              )}
             </Button>
           </motion.div>
         )}
