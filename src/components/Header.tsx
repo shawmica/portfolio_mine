@@ -43,7 +43,6 @@ const Header = () => {
     <header className="border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-blur:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
 
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -54,14 +53,18 @@ const Header = () => {
           </Link>
         </motion.div>
 
-        {/* Mobile menu toggle */}
         <Button
           variant="ghost"
           size="icon"
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {mobileMenuOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
         </Button>
 
         {/* Desktop menu */}
@@ -87,33 +90,52 @@ const Header = () => {
           </NavigationMenu>
         </motion.div>
 
-        {/* Mobile menu dropdown */}
+        {/* Mobile menu */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
               key="mobileMenu"
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="absolute top-16 left-0 right-0 z-50 w-full bg-white dark:bg-gray-900 text-foreground p-6 shadow-md md:hidden"
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-16 left-4 z-50 w-auto bg-white dark:bg-gray-900 text-foreground p-4 rounded-lg shadow-lg md:hidden"
             >
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-3">
                 {menuItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-lg font-medium hover:text-primary text-left"
+                    className="text-base font-medium hover:text-primary text-left transition-colors"
                   >
                     {item.label}
                   </button>
                 ))}
+
+                {mounted && (
+                  <button
+                    onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                    className="mt-3 flex items-center justify-start space-x-2 text-sm font-medium hover:text-primary transition-colors"
+                  >
+                    {theme === "light" ? (
+                      <>
+                        <Moon className="h-4 w-4" />
+                        <span>Dark Mode</span>
+                      </>
+                    ) : (
+                      <>
+                        <Sun className="h-4 w-4" />
+                        <span>Light Mode</span>
+                      </>
+                    )}
+                  </button>
+                )}
               </nav>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Theme toggle */}
+        {/* Theme toggle button for desktop */}
         {mounted && (
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
