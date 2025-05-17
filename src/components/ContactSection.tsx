@@ -36,7 +36,7 @@ const ContactSection = () => {
 
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true);
-    const payload = { ...data, access_key: "YOUR_ACCESS_KEY_HERE" };
+    const payload = { ...data, access_key: "6f9d00da-9ecb-4a12-b79a-dfac48add3b1" };
 
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
