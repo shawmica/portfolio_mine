@@ -65,7 +65,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
           >
             <div className="aspect-square max-w-xs mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-[0_0_25px_rgba(0,191,255,0.6)]">
               <img 
-                src="..\src\img\profile.jpg"
+                src="..\src\img\profile1.jpg"
                 alt="Developer Profile"
                 className="w-full h-full object-cover"
               />
