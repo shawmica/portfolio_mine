@@ -78,7 +78,7 @@ const projectsData = [
   {
     id: 5,
     title: "My Personal Portfolio Website",
-    description: "A clean, responsive portfolio website built with React.js, HTML, and CSS to showcase my work in AI, image processing, and frontend development.",
+    description: "A clean, responsive portfolio website built with React.js, HTML, and CSS to showcase my work in AI, image processing, and web development.",
     tags: ["HTML", "CSS", "React", "JavaScript"],
     imageUrl: port,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",

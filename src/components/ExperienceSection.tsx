@@ -36,7 +36,7 @@ const ExperienceSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Experience
+          Volunteering 
         </motion.h2>
 
         <div className="space-y-6">
