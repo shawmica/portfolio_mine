@@ -1,29 +1,40 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
+import { Megaphone, Laptop, Network, Users } from "lucide-react";
 
 const experienceData = [
   {
     id: 1,
-    company: "Tech Innovators Inc.",
-    position: "Senior Frontend Developer",
-    duration: "January 2021 - Present",
-    description: "Led the development of the company's flagship product, improving performance by 40%. Managed a team of 5 developers and implemented modern CI/CD practices."
+    company: "IEEE Student Branch of RUSL",
+    position: "Publicity Team Member",
+    duration: "Nov 2023 - Feb 2025 • 1 yr 4 mos",
+    description: "Supporting event promotions, communications, and visibility efforts for IEEE student activities at RUSL.",
+    icon: <Megaphone className="h-5 w-5 text-primary" />,
   },
   {
     id: 2,
-    company: "Digital Solutions LLC",
-    position: "Full Stack Developer",
-    duration: "June 2018 - December 2020",
-    description: "Developed responsive web applications using React and Node.js. Collaborated with design teams to implement UI/UX improvements and integrated third-party APIs."
+    company: "IEEE Computer Society",
+    position: "Student Member",
+    duration: "Jun 2024 - Present • 1 yr",
+    description: "Active member participating in technical communities, webinars, and networking activities related to computer science and engineering.",
+    icon: <Laptop className="h-5 w-5 text-primary" />,
   },
   {
     id: 3,
-    company: "Web Creators Studio",
-    position: "Junior Developer",
-    duration: "August 2016 - May 2018",
-    description: "Built and maintained client websites using HTML, CSS, and JavaScript. Assisted in transitioning the company's tech stack to React and improved site performance."
-  }
+    company: "IEEE",
+    position: "Student Member",
+    duration: "Jun 2024 - Present • 1 yr",
+    description: "Engaged in IEEE events, workshops, and volunteering activities to promote technological advancements and student engagement.",
+    icon: <Network className="h-5 w-5 text-primary" />,
+  },
+  {
+    id: 4,
+    company: "IEEE Women in Engineering",
+    position: "Student Member",
+    duration: "Jul 2024 - Present • 11 mos",
+    description: "Supporting initiatives that inspire, engage, and empower women in engineering and technology.",
+    icon: <Users className="h-5 w-5 text-primary" />,
+  },
 ];
 
 const ExperienceSection = () => {
@@ -31,12 +42,12 @@ const ExperienceSection = () => {
     <section id="experience" className="py-16 scroll-mt-16">
       <div className="container">
         <motion.h2
-          className="text-3xl font-bold tracking-tight mb-8"
+          className="text-3xl font-bold tracking-tight mb-8 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Volunteering 
+          Volunteering
         </motion.h2>
 
         <div className="space-y-6">
@@ -48,10 +59,12 @@ const ExperienceSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <Card className="rounded-2xl border border-white/20 shadow-[0_0_15px_2px_rgba(59,130,246,0.5)] transition-transform duration-300 hover:scale-[1.02]">
-                <CardHeader className="flex flex-row items-start space-x-4 pb-2">
+              <Card className="relative overflow-hidden rounded-2xl border border-white/20 transition-transform duration-300 hover:scale-[1.02] hover:border-transparent hover:ring-2 hover:ring-blue-500 hover:shadow-[0_0_30px_5px_rgba(59,130,246,0.3)]">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl blur-lg opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+
+                <CardHeader className="flex flex-row items-start space-x-4 pb-2 relative z-10">
                   <div className="bg-primary/10 p-2 rounded-lg">
-                    <Briefcase className="h-5 w-5 text-primary" />
+                    {item.icon}
                   </div>
                   <div className="space-y-1">
                     <CardTitle className="text-xl">{item.position}</CardTitle>
@@ -60,7 +73,7 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <p>{item.description}</p>
                 </CardContent>
               </Card>

@@ -10,6 +10,7 @@ import food from '../img/food.png';
 import notepad from '../img/notepad.png';
 import game from '../img/game.png';
 import port from '../img/port.png';
+import port2 from '../img/port2.png';
 
 const projectsData = [
   {
@@ -29,6 +30,15 @@ const projectsData = [
     imageUrl: slide,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_computervision-opencv-gesturecontrol-activity-7215255849957490688-UhvG",
     githubUrl: "https://github.com/shawmica/Presentation_with_Gestures"
+  },
+  {
+    id: 9,
+    title: "My Portfolio Website",
+    description: "Dynamic personal portfolio to showcase my skills, projects, certifications, and professional activities, featuring a modern, responsive design powered by React, Vite, and Shadcn UI.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn UI"],
+    imageUrl: port2,
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",
+    githubUrl: "https://github.com/shawmica/MyPortfolio"
   },
   {
     id: 3,
@@ -76,7 +86,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/SpaceInvader_Game"
   },
   {
-    id: 5,
+    id: 8,
     title: "My Personal Portfolio Website",
     description: "A clean, responsive portfolio website built with React.js, HTML, and CSS to showcase my work in AI, image processing, and web development.",
     tags: ["HTML", "CSS", "React", "JavaScript"],

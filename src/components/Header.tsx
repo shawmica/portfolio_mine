@@ -49,7 +49,7 @@ const Header = () => {
           transition={{ duration: 0.4 }}
         >
           <Link to="/" className="text-xl font-bold tracking-tight">
-            Portfolio
+            MyPortfolio
           </Link>
         </motion.div>
 

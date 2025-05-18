@@ -7,40 +7,23 @@ import excert2 from '../img/excert2.jpg';
 const extracurricularData = [
   {
     id: 1,
-    title: "Volunteer Web Developer",
-    organization: "Local Community Center",
-    period: "2022 - Present",
+    title: "Grade 3 Music Theory",
+    organization: "The Associated Board of the Royal Schools of Music",
+    period: "2015",
     icon: <Star className="h-10 w-10 text-primary/70" />,
     image: excert1,
-    description: "Developing and maintaining websites for local non-profit organizations, providing free web services to community groups.",
+    description: "Recognized for academic achievement in Grade 3 Music Theory under the Associated Board of the Royal Schools of Music (ABRSM). Demonstrated strong proficiency in reading and interpreting music notation, understanding rhythmic structures, time signatures, and key signatures. Applied theoretical knowledge of scales, intervals, chords, and cadences to musical analysis and composition. Developed the ability to identify musical terms, symbols, and structures essential for performance and score interpretation, laying a solid foundation for advanced music theory and practical musicianship.",
   },
   {
     id: 2,
-    title: "Tech Meetup Organizer",
-    organization: "City Tech Enthusiasts",
-    period: "2021 - Present",
+    title: "Grade 3 PIANO",
+    organization: "The Associated Board of the Royal Schools of Music",
+    period: "2015",
     icon: <Trophy className="h-10 w-10 text-primary/70" />,
     image: excert2,
-    description: "Organizing monthly technology meetups focusing on web development, bringing together professionals and enthusiasts.",
+    description: "Recognized for outstanding musical performance in Grade 3 Piano, achieving Distinction under the Associated Board of the Royal Schools of Music (ABRSM). Demonstrated advanced proficiency in sight-reading, hand coordination, rhythmic precision, tempo control, and dynamic range. Delivered expressive interpretations of musical pieces through articulation, phrasing, and stylistic accuracy. Developed technical skills in scales, arpeggios, and finger positioning, laying a strong foundation for higher-level piano repertoire and performance excellence.",
   },
-  {
-    id: 3,
-    title: "Hackathon Participant",
-    organization: "Various Tech Events",
-    period: "2020 - Present",
-    icon: <Flag className="h-10 w-10 text-primary/70" />,
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&h=400",
-    description: "Regular participant in both local and national hackathons, focusing on creating innovative solutions to real-world problems.",
-  },
-  {
-    id: 4,
-    title: "Certified Pianist",
-    organization: "Trinity College London",
-    period: "Completed 2021",
-    icon: <Trophy className="h-10 w-10 text-primary/70" />,
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Piano_keyboard.svg",
-    description: "Achieved certification in Piano Practical and Theory examinations, demonstrating dedication to music and artistic expression.",
-  },
+  
 ];
 
 const ExtracurricularSection = () => {
