@@ -7,7 +7,7 @@ import cert3 from '../img/cert3.png';
 import cert4 from '../img/cert4.png';
 import cert5 from '../img/cert5.png';
 import cert6 from '../img/cert6.png';
-import cert7 from '../img/cert7.png';
+
 import cert8 from '../img/cert8.png';
 import cert9 from '../img/cert9.png';
 import cert10 from '../img/cert10.png';
@@ -20,31 +20,34 @@ import cert16 from '../img/cert16.png';
 import cert17 from '../img/cert17.png';
 import cert18 from '../img/cert18.png';
 import cert19 from '../img/cert19.png';
+import cert20 from '../img/cert20.png';
+import cert21 from '../img/cert21.jpg';
 
 import { Button } from "@/components/ui/button";
 
 const certificationsData = [
-  { id: 1, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert1, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 2, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert2, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 3, name: "Full Stack Web Development", issuer: "Udacity", date: "October 2022", image: cert3, description: "Comprehensive training in modern web development technologies and practices." },
-  { id: 4, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert4, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 5, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert5, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 6, name: "Full Stack Web Development", issuer: "Udacity", date: "October 2022", image: cert6, description: "Comprehensive training in modern web development technologies and practices." },
-  { id: 7, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert7, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 8, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert8, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 9, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert9, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 10, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert10, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 11, name: "Full Stack Web Development", issuer: "Udacity", date: "October 2022", image: cert11, description: "Comprehensive training in modern web development technologies and practices." },
-  { id: 12, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert12, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 13, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert13, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 14, name: "Full Stack Web Development", issuer: "Udacity", date: "October 2022", image: cert14, description: "Comprehensive training in modern web development technologies and practices." },
-  { id: 15, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert15, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 16, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert16, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 17, name: "AWS Certified Cloud Practitioner", issuer: "Amazon Web Services", date: "May 2023", image: cert17, description: "Foundational certification validating cloud fluency and AWS knowledge." },
-  { id: 18, name: "Professional Scrum Master I", issuer: "Scrum.org", date: "January 2023", image: cert18, description: "Certification for understanding and applying Scrum framework and practices." },
-  { id: 19, name: "Full Stack Web Development", issuer: "Udacity", date: "October 2022", image: cert19, description: "Comprehensive training in modern web development technologies and practices." },
+  { id: 1, name: "Agile Project Management in ICT Projects", issuer: "University of Moratuwa", date: "April 2025", image: cert1 },
+  { id: 2, name: "MoraXtreme 9.0 Certificate of Participation", issuer: "University of Moratuwa", date: "October 2024", image: cert2 },
+  { id: 3, name: "Python Programming", issuer: "University of Moratuwa", image: cert3 },
+  { id: 4, name: "Web Design for Beginners", issuer: "University of Moratuwa",  image: cert4 },
+  { id: 5, name: "Figma Certification of Completion", issuer: "Marazin Academy", date: "October 2024", image: cert5 },
+  { id: 6, name: "Xtreme Encode", issuer: "ENCIDE MACE, IEEEXTREME 18.0 Region 10", date: "October 2024", image: cert6 },
+  { id: 8, name: "IEEEXtreme 18.0 Programming Competition", issuer: "IEEE", date: "October 2024", image: cert8 },
+  { id: 9, name: "Ethics Champion", issuer: "IEEE", date: "August 2024", image: cert9 },
+  { id: 10, name: "Front-End Web Development", issuer: "University of Moratuwa", date: "2024", image: cert10 },
+  { id: 11, name: "Python for Beginners", issuer: "University of Moratuwa", date: "2022", image: cert11 },
+  { id: 12, name: "Foundations of Project Management", issuer: "University of Moratuwa", date: "2024", image: cert12 },
+  { id: 14, name: "Introduction to Microsoft Azure", issuer: "Microsoft Learn Student Ambassador", image: cert14 },
+  { id: 15, name: "Problem Solving (Basic)", issuer: "HackerRank", date: "2024", image: cert15 },
+  { id: 16, name: "IEEE R10 ERM Student Contest", issuer: "IEEE", date: "January 2023", image: cert16 },
+  { id: 17, name: "Python Django 101", issuer: "Simplilearn", date: "May 2025", image: cert17 },
+  { id: 18, name: "API Beginner Learning Path", issuer: "Postman Academy", date: "May 2025", image: cert18 },
+  { id: 19, name: "API Testing Path", issuer: "Postman Academy", date: "May 2025", image: cert19 },
+  { id: 20, name: "RUSLXtreme 1.0 Mini Hackathon", issuer: "Rajarata University of Sri Lanka IEEE Student Branch", date: "October 2024", image: cert20 },
+  { id: 21, name: "BITCODE V5.0 Preselection Round", issuer: "Rajarata University of Sri Lanka", date: "November 2024", image: cert21 },
 
 ];
+
 
 const CertificationsSection = () => {
   const [showAll, setShowAll] = useState(false);
