@@ -78,7 +78,7 @@ const ContactSection = () => {
             <div className="space-y-6">
               {[{ icon: <Mail />, text: "shawmi3030@gmail.com" },
                 { icon: <Phone />, text: "+1 (123) 456-7890" },
-                { icon: <MapPin />, text: "Jaffna, Srilanka" }].map((item, idx) => (
+                { icon: <MapPin />, text: "Jaffna, Sri Lanka" }].map((item, idx) => (
                 <motion.div key={idx} whileHover={{ scale: 1.05 }} className="flex items-center space-x-3 text-muted-foreground">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full relative">
                     <span className="absolute inset-0 rounded-full blur-sm bg-blue-500 opacity-30"></span>
@@ -92,11 +92,16 @@ const ContactSection = () => {
             <div className="mt-8">
               <h3 className="text-lg font-semibold mb-4">Connect with me on social media:</h3>
               <div className="flex space-x-4">
-                {["instagram", "linkedin-in", "twitter", "github"].map((icon, idx) => (
-                  <a href="#" key={idx} className="relative">
+                {[
+                  { icon: "instagram", url: "https://www.instagram.com/shawmi__/" },
+                  { icon: "linkedin-in", url: "www.linkedin.com/in/shawmica-sivatharan" },
+                  { icon: "twitter", url: "https://twitter.com" },
+                  { icon: "github", url: "https://github.com/shawmica" },
+                ].map((social, idx) => (
+                  <a href={social.url} key={idx} target="_blank" rel="noopener noreferrer" className="relative">
                     <div className="flex items-center justify-center w-10 h-10 rounded-full relative">
                       <span className="absolute inset-0 rounded-full blur-sm bg-blue-500 opacity-30"></span>
-                      <i className={`fab fa-${icon} text-blue-500 relative z-10`}></i>
+                      <i className={`fab fa-${social.icon} text-blue-500 relative z-10`}></i>
                     </div>
                   </a>
                 ))}
@@ -107,7 +112,6 @@ const ContactSection = () => {
           <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }} className="relative"
           >
-            {/* ✅ Minimal Glow Behind Form */}
             <div className="absolute inset-0 rounded-2xl blur-[2px] bg-blue-500 opacity-10 z-0"></div>
 
             <Card className="relative z-10 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 shadow-lg">

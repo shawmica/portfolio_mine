@@ -15,6 +15,7 @@ const technologies: Technology[] = [
   { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", category: "frontend" },
   { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg", category: "frontend" },
   { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", category: "frontend" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", category: "frontend" },
   { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", category: "frontend" },
 
   // Backend
@@ -22,9 +23,11 @@ const technologies: Technology[] = [
   { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", category: "backend" },
   { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", category: "backend" },
   { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", category: "backend" },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", category: "backend" },
+  { name: "REST API", icon: "https://img.icons8.com/external-flat-icons-inmotus-design/67/external-api-web-development-flat-icons-inmotus-design.png", category: "backend" },
 
   // API & Testing
- { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", category: "other" },
+  { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", category: "other" },
 
   // DevOps & Cloud
   { name: "Microsoft Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg", category: "other" },
@@ -36,14 +39,22 @@ const technologies: Technology[] = [
   { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", category: "other" },
   { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", category: "other" },
   { name: "Qt Creator", icon: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg", category: "other" },
+  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", category: "other" },
+  { name: "Android Studio", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg", category: "other" },
+  { name: "Anaconda", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg", category: "other" },
+  { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg", category: "other" },
 
   // Languages
   { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "language" },
   { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", category: "language" },
   { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", category: "language" },
   { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", category: "language" },
-  ];
+  { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", category: "language" },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", category: "language" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", category: "language" },
+];
 
+// Category labels
 const categoryLabels: Record<Technology["category"], string> = {
   frontend: "Frontend Development",
   backend: "Backend Development",
@@ -52,13 +63,26 @@ const categoryLabels: Record<Technology["category"], string> = {
   language: "Languages",
 };
 
+// Deduplication function to filter unique names
+const getUniqueTechnologies = (techs: Technology[]) => {
+  const seen = new Set();
+  return techs.filter((tech) => {
+    if (seen.has(tech.name)) {
+      return false;
+    }
+    seen.add(tech.name);
+    return true;
+  });
+};
+
 const SkillsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<"all" | Technology["category"]>("all");
 
-  const filteredTechnologies =
+  const filteredTechnologies = getUniqueTechnologies(
     selectedCategory === "all"
       ? technologies
-      : technologies.filter((tech) => tech.category === selectedCategory);
+      : technologies.filter((tech) => tech.category === selectedCategory)
+  );
 
   return (
     <section id="skills" className="py-16 scroll-mt-16 bg-muted/30">
@@ -80,9 +104,7 @@ const SkillsSection = () => {
         >
           <Badge
             onClick={() => setSelectedCategory("all")}
-            className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${
-              selectedCategory === "all" ? "bg-primary" : "bg-secondary"
-            }`}
+            className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${selectedCategory === "all" ? "bg-primary" : "bg-secondary"}`}
           >
             All
           </Badge>
@@ -90,9 +112,7 @@ const SkillsSection = () => {
             <Badge
               key={key}
               onClick={() => setSelectedCategory(key as Technology["category"])}
-              className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${
-                selectedCategory === key ? "bg-primary" : "bg-secondary"
-              }`}
+              className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${selectedCategory === key ? "bg-primary" : "bg-secondary"}`}
             >
               {label}
             </Badge>

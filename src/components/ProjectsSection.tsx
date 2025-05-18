@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import fungiImage from '../img/fungi.png';
 import slide from '../img/slide.jpg';
 import vol from '../img/vol.png';
+import frame from '../img/frame.png';
+import food from '../img/food.png';
+import notepad from '../img/notepad.png';
+import game from '../img/game.png';
+import port from '../img/port.png';
 
 const projectsData = [
   {
@@ -13,7 +18,7 @@ const projectsData = [
     description: "A 14-day image processing study analyzing black fungi (Hyphae Penta) on coconut flesh using OpenCV and Python.",
     tags: ["OpenCV", "Python", "Matplotlib", "ImageSegmentation"],
     imageUrl: fungiImage,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_fungalanalysis-imageprocessing-mycology-activity-7243471294531280896-GK-z?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_fungalanalysis-imageprocessing-mycology-activity-7243471294531280896-GK-z",
     githubUrl: "https://github.com/shawmica/Image-Elites"
   },
   {
@@ -22,7 +27,7 @@ const projectsData = [
     description: "Built a gesture-based slide tool using OpenCV and cvzone’s HandTrackingModule.",
     tags: ["OpenCV", "CvZone", "Python", "HandTrackingModule", "Mediapipe", "ComputerVision"],
     imageUrl: slide,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_computervision-opencv-gesturecontrol-activity-7215255849957490688-UhvG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_computervision-opencv-gesturecontrol-activity-7215255849957490688-UhvG",
     githubUrl: "https://github.com/shawmica/Presentation_with_Gestures"
   },
   {
@@ -31,7 +36,7 @@ const projectsData = [
     description: "Developed a hand gesture-based volume system using OpenCV, Python, and Pycaw.",
     tags: ["OpenCV", "Python", "Pycaw", "MediaPipe", "NumPy"],
     imageUrl: vol,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs",
     githubUrl: "https://github.com/shawmica/HandGesture"
   },
   {
@@ -39,18 +44,45 @@ const projectsData = [
     title: "Frame Focus",
     description: "A dynamic photography portfolio with an interactive gallery and a contact form that lets visitors easily get in touch.",
     tags: ["HTML", "CSS", "Javascript", "React"],
-    imageUrl: vol,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    imageUrl: frame,
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs",
     githubUrl: "https://github.com/shawmica/photography_website"
   },
   {
-    id: 4,
-    title: "Recipe Management Web Application ",
+    id: 5,
+    title: "Recipe Management Web Application",
     description: "A full-stack recipe management app, users can browse, search, and filter recipes in real-time, while admins manage recipes through a secure panel.",
-    tags: ["HTML", "CSS", "React", "Typescript","Python","Django"],
-    imageUrl: vol,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    tags: ["HTML", "CSS", "React", "Typescript", "Python", "Django"],
+    imageUrl: food,
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",
     githubUrl: "https://github.com/shawmica/chefs-corner"
+  },
+  {
+    id: 6,
+    title: "Python Notepad",
+    description: "A fully functional text editor, featuring real-time spell checking with red underlines for typos and a clean, modern GUI.",
+    tags: ["Python", "Tkinter", "OOP"],
+    imageUrl: notepad,
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-tkinter-gui-activity-7328444016029519872-0fGs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    githubUrl: "https://github.com/shawmica/Text_Editor"
+  },
+  {
+    id: 7,
+    title: "Space Invaders Game",
+    description: "A retro-style Space Invaders game built with Python and Pygame, featuring custom graphics, sound effects, player/enemy interactions, scoring, and game-over states. This project enhanced my OOP and event-driven programming skills.",
+    tags: ["Python", "Pygame", "Pygame Mixer", "OOP"],
+    imageUrl: game,
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-gamedevelopment-pygame-activity-7329001571604746240-aved?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    githubUrl: "https://github.com/shawmica/SpaceInvader_Game"
+  },
+  {
+    id: 5,
+    title: "My Personal Portfolio Website",
+    description: "A clean, responsive portfolio website built with React.js, HTML, and CSS to showcase my work in AI, image processing, and frontend development.",
+    tags: ["HTML", "CSS", "React", "JavaScript"],
+    imageUrl: port,
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",
+    githubUrl: "https://github.com/shawmica/MyPortfolio"
   }
 ];
 
@@ -100,7 +132,10 @@ const ProjectsSection = () => {
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription className="flex flex-wrap gap-2 mt-2">
                     {project.tags.map(tag => (
-                      <span key={tag} className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded-md">
+                      <span
+                        key={tag}
+                        className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded-md shadow-[0_0_4px_rgba(59,130,246,0.6)] border border-blue-500"
+                      >
                         {tag}
                       </span>
                     ))}

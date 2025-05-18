@@ -23,12 +23,13 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <p>
-              I am a third-year IT undergraduate at Rajarata University of Sri Lanka, passionate about using technology to solve real-world problems. My interests span Software Engineering, Full-Stack Web Development, Cloud Computing, Artificial Intelligence (AI), Machine Learning (ML), and Computer Vision. I enjoy building practical solutions and exploring emerging technologies that create impact. </p>
+              I am a third-year IT undergraduate at Rajarata University of Sri Lanka, passionate about using technology to solve real-world problems. My interests include Software Engineering, Full-Stack Web Development, Cloud Computing, AI/ML, and Computer Vision.</p>
             <p>
-             Throughout my journey, I have gained strong hands-on experience in technologies like Python, Java, C, C++, JavaScript, TypeScript, React, Shadcn UI, Bootstrap, HTML, CSS, Axios, Django, and Django REST Framework. I am skilled in building secure and scalable applications using Microsoft Azure and JWT Authentication. My work in AI and Computer Vision includes projects involving OpenCV, Pycaw, Matplotlib, and image analysis techniques.
+              I have hands-on experience with Python, Java, C/C++, JavaScript, TypeScript, React, Shadcn UI, Bootstrap, HTML, CSS, Axios, Django, and Django REST Framework. I'm skilled in building secure, scalable applications using Microsoft Azure and JWT Authentication.
 
-I am also passionate about UI/UX design and have worked on user-centered interface designs using Figma, ensuring meaningful digital experiences. In addition to technical expertise, I have developed strong skills in Agile Project Management, team collaboration, problem-solving, and ethical technology practices. </p>
-            
+              In addition to technical skills, I bring strong problem-solving abilities, adaptability, teamwork, effective communication, and a continuous learning mindset.
+
+            </p>
           </motion.div>
 
           <div className="grid gap-6 sm:grid-cols-2">
