@@ -76,7 +76,7 @@ const CertificationsSection = () => {
                 </div>
                 <h3 className="text-xl font-medium mb-1">{certification.name}</h3>
                 <p className="text-sm text-muted-foreground mb-3">Issued by {certification.issuer}</p>
-                <p className="text-sm">{certification.description}</p>
+                
               </CardContent>
             </Card>
           ))}
