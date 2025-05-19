@@ -46,11 +46,12 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <Button asChild size="lg" className="hover-scale">
-                <a href="..\src\img\resume.pdf">
-                  View My Resume
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
+  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    View My Resume
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </a>
+</Button>
+
               <Button asChild variant="outline" size="lg" className="hover-scale">
                 <a href="#contact">Contact Me</a>
               </Button>
