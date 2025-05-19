@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import restapi from "../img/restapi.jpeg"
 
 interface Technology {
   name: string;
@@ -24,7 +25,7 @@ const technologies: Technology[] = [
   { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", category: "backend" },
   { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", category: "backend" },
   { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", category: "backend" },
-  { name: "REST API", icon: "https://img.icons8.com/external-flat-icons-inmotus-design/67/external-api-web-development-flat-icons-inmotus-design.png", category: "backend" },
+  { name: "REST API", icon: restapi, category: "backend" },
 
   // API & Testing
   { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", category: "other" },

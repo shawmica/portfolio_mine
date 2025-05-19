@@ -32,63 +32,63 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/Presentation_with_Gestures"
   },
   {
-    id: 9,
+    id: 3,
     title: "My Portfolio Website",
-    description: "Dynamic personal portfolio to showcase my skills, projects, certifications, and professional activities, featuring a modern, responsive design powered by React, Vite, and Shadcn UI.",
+    description: "Dynamic personal portfolio to showcase my skills, projects, certifications, and professional activities.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn UI"],
     imageUrl: port2,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",
     githubUrl: "https://github.com/shawmica/MyPortfolio"
   },
   {
-    id: 3,
+    id: 4,
     title: "Gesture Volume Control",
-    description: "Developed a hand gesture-based volume system using OpenCV, Python, and Pycaw.",
+    description: "Hand gesture-based volume control system using OpenCV, Python, and Pycaw.",
     tags: ["OpenCV", "Python", "Pycaw", "MediaPipe", "NumPy"],
     imageUrl: vol,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs",
     githubUrl: "https://github.com/shawmica/HandGesture"
   },
   {
-    id: 4,
-    title: "Frame Focus",
-    description: "A dynamic photography portfolio with an interactive gallery and a contact form that lets visitors easily get in touch.",
+    id: 5,
+    title: "Frame Focus Photography",
+    description: "A dynamic photography portfolio with an interactive gallery and contact form.",
     tags: ["HTML", "CSS", "Javascript", "React"],
     imageUrl: frame,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs",
     githubUrl: "https://github.com/shawmica/photography_website"
   },
   {
-    id: 5,
-    title: "Recipe Management Web Application",
-    description: "A full-stack recipe management app, users can browse, search, and filter recipes in real-time, while admins manage recipes through a secure panel.",
+    id: 6,
+    title: "Recipe Management App",
+    description: "A full-stack recipe app with real-time search and admin management panel.",
     tags: ["HTML", "CSS", "React", "Typescript", "Python", "Django"],
     imageUrl: food,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",
     githubUrl: "https://github.com/shawmica/chefs-corner"
   },
   {
-    id: 6,
+    id: 7,
     title: "Python Notepad",
-    description: "A fully functional text editor, featuring real-time spell checking with red underlines for typos and a clean, modern GUI.",
+    description: "A functional text editor with spell checking and modern GUI.",
     tags: ["Python", "Tkinter", "OOP"],
     imageUrl: notepad,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-tkinter-gui-activity-7328444016029519872-0fGs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-tkinter-gui-activity-7328444016029519872-0fGs",
     githubUrl: "https://github.com/shawmica/Text_Editor"
   },
   {
-    id: 7,
+    id: 8,
     title: "Space Invaders Game",
-    description: "A retro-style Space Invaders game built with Python and Pygame, featuring custom graphics, sound effects, player/enemy interactions, scoring, and game-over states. This project enhanced my OOP and event-driven programming skills.",
-    tags: ["Python", "Pygame", "Pygame Mixer", "OOP"],
+    description: "A retro-style game with player/enemy interactions, scoring, and sound effects.",
+    tags: ["Python", "Pygame", "OOP"],
     imageUrl: game,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-gamedevelopment-pygame-activity-7329001571604746240-aved?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-gamedevelopment-pygame-activity-7329001571604746240-aved",
     githubUrl: "https://github.com/shawmica/SpaceInvader_Game"
   },
   {
-    id: 8,
-    title: "My Personal Portfolio Website",
-    description: "A clean, responsive portfolio website built with React.js, HTML, and CSS to showcase my work in AI, image processing, and web development.",
+    id: 9,
+    title: "Classic Portfolio Website",
+    description: "A responsive portfolio website built with React.js, HTML, and CSS.",
     tags: ["HTML", "CSS", "React", "JavaScript"],
     imageUrl: port,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_reactjs-typescript-django-activity-7327213614342328320-vmXh",
@@ -101,7 +101,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-16 scroll-mt-16">
       <div className="container">
         <motion.h2
-          className="text-3xl font-bold tracking-tight mb-8"
+          className="text-3xl font-bold tracking-tight mb-8 text-white"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -124,51 +124,59 @@ const ProjectsSection = () => {
           {projectsData.map((project) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="hover-scale overflow-hidden rounded-xl shadow-lg transition-transform duration-300">
-                <div className="aspect-video w-full overflow-hidden">
-                  <motion.img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    whileHover={{ scale: 1.05 }}
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription className="flex flex-wrap gap-2 mt-2">
-                    {project.tags.map(tag => (
-                      <span
-                        key={tag}
-                        className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded-md shadow-[0_0_4px_rgba(59,130,246,0.6)] border border-blue-500"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>{project.description}</p>
-                </CardContent>
-                <CardFooter className="flex gap-2">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Card className="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                  <div className="aspect-video w-full overflow-hidden">
+                    <motion.img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle>{project.title}</CardTitle>
+                    <CardDescription className="flex flex-wrap gap-2 mt-2">
+                      {project.tags.map(tag => (
+                        <motion.span
+                          key={tag}
+                          className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded-md border border-blue-500 shadow-[0_0_4px_rgba(59,130,246,0.6)]"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {tag}
+                        </motion.span>
+                      ))}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{project.description}</p>
+                  </CardContent>
+                  <CardFooter className="flex gap-2">
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
