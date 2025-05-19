@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Layout, Database, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
+import rjt from "../img/rjt.jpeg";
+import jc from "../img/jc.jpeg";
 
 const AboutSection = () => {
   return (
@@ -69,7 +71,7 @@ const AboutSection = () => {
           {/* Rajarata University */}
           <Card className="border border-white/20 rounded-2xl shadow-[0_0_15px_2px_rgba(59,130,246,0.5)]">
             <CardContent className="p-6 flex items-start gap-4">
-              <img src="src/img/rjt.jpeg" alt="Rajarata University Emblem" className="w-16 h-16 object-contain" />
+              <img src= {rjt} alt="Rajarata University Emblem" className="w-16 h-16 object-contain" />
 
               <div>
                 <div className="flex items-center mb-2">
@@ -89,7 +91,7 @@ const AboutSection = () => {
           {/* Jaffna College */}
           <Card className="border border-white/20 rounded-2xl shadow-[0_0_15px_2px_rgba(59,130,246,0.5)]">
             <CardContent className="p-6 flex items-start gap-4">
-              <img src="src/img/jc.jpeg" alt="Jaffna College Emblem" className="w-12 h-12 rounded-full border" />
+              <img src= {jc} alt="Jaffna College Emblem" className="w-12 h-12 rounded-full border" />
               <div>
                 <div className="flex items-center mb-2">
                   <GraduationCap className="h-6 w-6 text-primary mr-2" />
