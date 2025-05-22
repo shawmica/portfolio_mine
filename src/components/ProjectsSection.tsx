@@ -101,7 +101,8 @@ const ProjectsSection = () => {
     <section id="projects" className="py-16 scroll-mt-16">
       <div className="container">
         <motion.h2
-          className="text-3xl font-bold tracking-tight mb-8 text-white"
+          className="text-3xl font-bold tracking-tight mb-8 text-gray-900 dark:text-white"
+
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

@@ -1,9 +1,14 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { motion } from "framer-motion";
-import ieee from '../img/ieee.jpeg';
-import wie from '../img/wie.jpeg';
-import rjt from '../img/ieeerjt.jpeg';
-import cs from '../img/cs.jpeg';
+import ieee from "../img/ieee.jpeg";
+import wie from "../img/wie.jpeg";
+import rjt from "../img/ieeerjt.jpeg";
+import cs from "../img/cs.jpeg";
 
 // Experience data with logos
 const experienceData = [
@@ -42,7 +47,7 @@ const ExperienceSection = () => {
     <section id="experience" className="py-16 scroll-mt-16">
       <div className="container">
         <motion.h2
-          className="text-3xl font-bold tracking-tight mb-8 text-white"
+          className="text-3xl font-bold tracking-tight mb-8 text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -71,9 +76,12 @@ const ExperienceSection = () => {
                     />
                   )}
                   <div>
-                    <CardTitle className="text-xl">{item.position}</CardTitle>
-                    <div className="text-sm text-muted-foreground">
-                      <span className="font-medium">{item.company}</span> • <span>{item.duration}</span>
+                    <CardTitle className="text-xl text-gray-900 dark:text-white">
+                      {item.position}
+                    </CardTitle>
+                    <div className="text-sm text-gray-700 dark:text-gray-400">
+                      <span className="font-medium">{item.company}</span> •{" "}
+                      <span>{item.duration}</span>
                     </div>
                   </div>
                 </CardHeader>
