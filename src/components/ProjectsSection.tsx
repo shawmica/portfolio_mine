@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import fungiImage from "../img/fungi.png";
 import slide from "../img/slide.jpg";
@@ -158,6 +159,9 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projectsData : projectsData.slice(0, 6);
+
   return (
     <section id="projects" className="py-16 scroll-mt-16">
       <div className="container">
@@ -182,7 +186,7 @@ const ProjectsSection = () => {
             },
           }}
         >
-          {projectsData.map((project) => (
+          {visibleProjects.map((project) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -245,6 +249,15 @@ const ProjectsSection = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        <div className="flex justify-center mt-8">
+          <Button
+            variant="outline"
+            onClick={() => setShowAll((prev) => !prev)}
+          >
+            {showAll ? "Show less" : "Read more"}
+          </Button>
+        </div>
       </div>
     </section>
   );
