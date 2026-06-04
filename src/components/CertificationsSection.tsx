@@ -22,6 +22,20 @@ import cert18 from '../img/cert18.png';
 import cert19 from '../img/cert19.png';
 import cert20 from '../img/cert20.png';
 import cert21 from '../img/cert21.jpg';
+import cert22 from '../img/cert22.png';
+import cert23 from '../img/cert23.png';
+import cert24 from '../img/cert24.png';
+import cert25 from '../img/cert25.png';
+import cert26 from '../img/cert26.png';
+import cert27 from '../img/cert27.png';
+import cert28 from '../img/cert28.png';
+import cert29 from '../img/cert29.png';
+import cert30 from '../img/cert30.png';
+import cert31 from '../img/cert31.png';
+import cert32 from '../img/cert32.png';
+import cert33 from '../img/cert33.png';
+import cert34 from '../img/cert34.png';
+import cert35 from '../img/cert35.png';
 
 const certificationsData = [
   { id: 1, name: "Agile Project Management in ICT Projects", issuer: "University of Moratuwa", date: "April 2025", image: cert1 },
@@ -43,6 +57,104 @@ const certificationsData = [
   { id: 19, name: "API Testing Path", issuer: "Postman Academy", date: "May 2025", image: cert19 },
   { id: 20, name: "RUSLXtreme 1.0 Mini Hackathon", issuer: "Rajarata University of Sri Lanka IEEE Student Branch", date: "October 2024", image: cert20 },
   { id: 21, name: "BITCODE V5.0 Preselection Round", issuer: "Rajarata University of Sri Lanka", date: "November 2024", image: cert21 },
+  {
+  id: 22,
+  name: "2nd Place - InnOrbit'26 Project Carnival",
+  issuer: "Rajarata University of Sri Lanka",
+  date: "March 2026",
+  image: cert22
+},
+{
+  id: 23,
+  name: "Agile Mastery: Empowering Teams for Project Success",
+  issuer: "Department of Computing, Rajarata University of Sri Lanka",
+  date: "February 2026",
+  image: cert23
+},
+{
+  id: 24,
+  name: "Exploratory Data Analysis for Machine Learning",
+  issuer: "IBM / Coursera",
+  date: "November 2025",
+  image: cert24
+},
+{
+  id: 25,
+  name: "Natural Language Processing (NLP) and Text Mining",
+  issuer: "Simplilearn SkillUp",
+  date: "June 2025",
+  image: cert25
+},
+{
+  id: 26,
+  name: "The Complete Prolog Programming Course: From Zero to Expert!",
+  issuer: "Udemy",
+  date: "August 2025",
+  image: cert26
+},
+{
+  id: 27,
+  name: "CodeRally 6.0 - Final 24-Hour Hackathon",
+  issuer: "IEEE Computer Society Student Branch Chapter of IIT",
+  date: "2025",
+  image: cert27
+},
+{
+  id: 28,
+  name: "AI/ML Engineer - Stage 2",
+  issuer: "SLIIT Centre for Open and Distance Education",
+  date: "November 2025",
+  image: cert28
+},
+{
+  id: 29,
+  name: "Google AI Essentials",
+  issuer: "Google / Coursera",
+  date: "September 2025",
+  image: cert29
+},
+{
+  id: 30,
+  name: "Introduction to Generative AI - Art of the Possible",
+  issuer: "AWS Training & Certification",
+  date: "June 2025",
+  image: cert30
+},
+{
+  id: 31,
+  name: "AI/ML Engineer - Stage 1",
+  issuer: "SLIIT Centre for Open and Distance Education",
+  date: "August 2025",
+  image: cert31
+},
+{
+  id: 32,
+  name: "Artificial Intelligence Beginners Guide",
+  issuer: "Simplilearn SkillUp",
+  date: "June 2025",
+  image: cert32
+},
+{
+  id: 33,
+  name: "Machine Learning",
+  issuer: "Simplilearn SkillUp",
+  date: "June 2025",
+  image: cert33
+},
+{
+  id: 34,
+  name: "Introduction to Generative AI Learning Path",
+  issuer: "Google Cloud / Coursera",
+  date: "May 2025",
+  image: cert34
+},
+{
+  id: 35,
+  name: "Postman API 101 Workshop",
+  issuer: "Rajarata University of Sri Lanka",
+  date: "May 2025",
+  image: cert35
+}
 ];
 
 const CertificationsSection = () => {
