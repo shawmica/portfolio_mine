@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import profile from '../img/profile1.jpg';
+import profile from '../img/profile1.png';
 import resumePdf from '../img/Resume.pdf';
 
 interface HeroSectionProps {
