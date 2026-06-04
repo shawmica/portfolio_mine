@@ -27,7 +27,7 @@ const projectsData = [
     description: "Built an AI-powered document assistant that allows users to upload PDFs and interact with them through natural language conversations. The system uses RAG, semantic search, ChromaDB, and Groq LLM to generate context-aware responses in real time.",
     tags: ["Python", "LangChain", "ChromaDB", "FastAPI", "Streamlit", "HuggingFace", "Groq", "RAG"],
     imageUrl: ragAssistant,
-    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_built-a-real-time-ai-assistant-using-rag-activity-#########",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_ai-generativeai-rag-activity-7465684074708242432-c6j0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
     githubUrl: "https://github.com/shawmica/real-time-rag-ai-assistant"
   },
   {
@@ -36,7 +36,7 @@ const projectsData = [
     description: "Developed a full-stack AI learning platform that transforms PDFs, notes, and slides into summaries, quizzes, flashcards, and chatbot support. The system includes progress tracking, study analytics, and document-aware learning assistance.",
     tags: ["React", "TypeScript", "Node.js", "Express", "SQLite", "OpenAI", "Vite", "EdTech"],
     imageUrl: aiStudyCompanion,
-    demoUrl: "YOUR_LINKEDIN_POST_URL",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_ai-edtech-fullstackdevelopment-activity-7393888726889906176-Te8f?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
     githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
   },
   {
@@ -45,7 +45,7 @@ const projectsData = [
     description: "Developed an intelligent Gmail automation system using Python, MCP, and Claude Desktop. The application reads emails securely through the Gmail API, detects spam or phishing, labels unread emails, and generates inbox summaries.",
     tags: ["Python", "MCP", "Claude Desktop", "Gmail API", "OAuth 2.0", "Google Cloud", "Automation", "AI"],
     imageUrl: gmailClassifier,
-    demoUrl: "YOUR_LINKEDIN_POST_URL",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_ai-python-automation-activity-7464275168602001408-RvkJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
     githubUrl: "https://github.com/shawmica/gmail-classifier-mcp"
   },
   {
@@ -54,7 +54,7 @@ const projectsData = [
     description: "Built an AI-powered math solver that reads printed equations using OCR, solves them with SymPy, and explains each step clearly. The system also provides voice explanations in English, Tamil, and Sinhala to support inclusive learning.",
     tags: ["Python", "OpenCV", "Tesseract OCR", "SymPy", "gTTS", "AI", "OCR", "EdTech"],
     imageUrl: mathly,
-    demoUrl: "YOUR_LINKEDIN_POST_URL",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_ai-edtech-innovation-activity-7345658733571579904-mitY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
     githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
   },
   {
@@ -63,7 +63,7 @@ const projectsData = [
     description: "Led the development of an ANN model to predict student grades using study hours, attendance, quiz scores, engagement, and missed deadlines. The project involved data preprocessing, feature engineering, and hyperparameter optimization.",
     tags: ["Python", "ANN", "Machine Learning", "Data Preprocessing", "Feature Engineering", "TensorFlow", "Education Analytics", "AI"],
     imageUrl: gradePrediction,
-    demoUrl: "YOUR_LINKEDIN_POST_URL",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_artificialintelligence-machinelearning-deeplearning-activity-7376839172378177537-ljWX?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
     githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
   },
   {
@@ -72,7 +72,7 @@ const projectsData = [
     description: "Collaboratively developed an Android meal planning app that helps users search recipes, save favourites, and plan weekly meals. The app uses Java, MVP architecture, TheMealDB API, Room Database, and Retrofit.",
     tags: ["Java", "Android", "MVP Architecture", "Retrofit", "Room Database", "SQLite", "TheMealDB API", "Material Design"],
     imageUrl: chefBuddy,
-    demoUrl: "YOUR_LINKEDIN_POST_URL",
+    demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_chef-buddy-android-app-chef-buddy-is-activity-7375157024428339200-uDRh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4mIRgB1YfZferkQ68Aclke_nk76XKMsSA",
     githubUrl: "https://github.com/YOUR_USERNAME/Chef-Buddy"
   },
   {
