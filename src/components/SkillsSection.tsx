@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import restapi from "../img/restapi.jpeg"
 
@@ -78,12 +78,20 @@ const getUniqueTechnologies = (techs: Technology[]) => {
 
 const SkillsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<"all" | Technology["category"]>("all");
+  const [showAll, setShowAll] = useState(false);
 
   const filteredTechnologies = getUniqueTechnologies(
     selectedCategory === "all"
       ? technologies
       : technologies.filter((tech) => tech.category === selectedCategory)
   );
+
+  // Reset showAll when category changes
+  useEffect(() => {
+    setShowAll(false);
+  }, [selectedCategory]);
+
+  const visibleTechnologies = showAll ? filteredTechnologies : filteredTechnologies.slice(0, 6);
 
   return (
     <section id="skills" className="py-16 scroll-mt-16 bg-muted/30">
@@ -98,14 +106,14 @@ const SkillsSection = () => {
         </motion.h2>
 
         <motion.div
-          className="flex flex-wrap gap-2 mb-8"
+          className="flex flex-wrap gap-3 mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <Badge
             onClick={() => setSelectedCategory("all")}
-            className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${selectedCategory === "all" ? "bg-primary" : "bg-secondary"}`}
+            className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === "all" ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)]" : "bg-secondary hover:bg-secondary/80"}`}
           >
             All
           </Badge>
@@ -113,7 +121,7 @@ const SkillsSection = () => {
             <Badge
               key={key}
               onClick={() => setSelectedCategory(key as Technology["category"])}
-              className={`cursor-pointer text-sm px-4 py-2 transition-all hover-scale ${selectedCategory === key ? "bg-primary" : "bg-secondary"}`}
+              className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === key ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)]" : "bg-secondary hover:bg-secondary/80"}`}
             >
               {label}
             </Badge>
@@ -133,7 +141,7 @@ const SkillsSection = () => {
           }}
         >
           <AnimatePresence>
-            {filteredTechnologies.map((tech) => (
+            {visibleTechnologies.map((tech) => (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -153,6 +161,19 @@ const SkillsSection = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {filteredTechnologies.length > 6 && (
+          <div className="flex justify-center mt-8">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Badge
+                onClick={() => setShowAll((prev) => !prev)}
+                className="cursor-pointer text-base px-8 py-3 transition-all duration-200 rounded-full font-semibold bg-primary text-white hover:shadow-[0_0_24px_rgba(59,130,246,0.6)] shadow-[0_0_12px_rgba(59,130,246,0.4)]"
+              >
+                {showAll ? "Show Less" : "Read More"}
+              </Badge>
+            </motion.div>
+          </div>
+        )}
       </div>
     </section>
   );
