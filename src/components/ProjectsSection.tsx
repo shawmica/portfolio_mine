@@ -39,7 +39,7 @@ const projectsData = [
   githubUrl: "https://github.com/shawmica/real-time-rag-ai-assistant"
   },
   {
-  id: 13,
+  id: 2,
   title: "Student Grade Prediction Model using ANN",
   description: "Developed an Artificial Neural Network (ANN) model to predict student academic performance based on study behavior, attendance, quiz results, engagement, and assignment completion. The system performs feature engineering and machine learning-based classification to predict final grades (A, B, C, or F), supporting data-driven educational insights.",
   tags: [
@@ -57,7 +57,7 @@ const projectsData = [
   githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
   },
   {
-  id: 11,
+  id: 3,
   title: "AI-Powered Gmail Classifier",
   description: "Developed an intelligent Gmail automation system using Python, MCP (Model Context Protocol), and Claude Desktop. The application securely reads emails through the Gmail API, classifies messages into categories, detects potential phishing and spam emails, automatically labels unread emails, and generates intelligent inbox summaries to improve email management and productivity.",
   tags: [
@@ -75,7 +75,7 @@ const projectsData = [
   githubUrl: "https://github.com/shawmica/gmail-classifier-mcp"
   },
   {
-    id: 2,
+    id: 4,
     title: "Fungal Growth Analysis",
     description: "A 14-day image processing study analyzing black fungi (Hyphae Penta) on coconut flesh using OpenCV and Python.",
     tags: ["OpenCV", "Python", "Matplotlib", "ImageSegmentation"],
@@ -84,7 +84,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/Image-Elites"
   },
   {
-    id: 3,
+    id: 5,
     title: "Gesture-Controlled Slides",
     description: "Built a gesture-based slide tool using OpenCV and cvzone’s HandTrackingModule.",
     tags: ["OpenCV", "CvZone", "Python", "HandTrackingModule", "Mediapipe", "ComputerVision"],
@@ -93,7 +93,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/Presentation_with_Gestures"
   },
   {
-  id: 15,
+  id: 6,
   title: "Mathly - AI Math Solver with Voice Explanations",
   description: "Developed an AI-powered math solver that reads printed equations using OpenCV and Tesseract OCR, detects variables, solves problems with SymPy, and explains each step clearly through voice explanations in English, Tamil, and Sinhala. The project focuses on making math learning more accessible through AI, OCR, symbolic computation, and multilingual speech support.",
   tags: [
@@ -111,7 +111,7 @@ const projectsData = [
   githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
 },
   {
-    id: 4,
+    id: 7,
     title: "My Portfolio Website",
     description: "Dynamic personal portfolio to showcase my skills, projects, certifications, and professional activities.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn UI"],
@@ -120,7 +120,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/MyPortfolio"
   },
   {
-    id: 4,
+    id: 8,
     title: "Gesture Volume Control",
     description: "Hand gesture-based volume control system using OpenCV, Python, and Pycaw.",
     tags: ["OpenCV", "Python", "Pycaw", "MediaPipe", "NumPy"],
@@ -129,7 +129,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/HandGesture"
   },
   {
-  id: 12,
+  id: 9,
   title: "AI Study Companion",
   description: "Developed a full-stack AI-powered learning platform that transforms PDFs, notes, and study materials into interactive learning experiences. The system generates AI-powered summaries, quizzes, flashcards, and personalized study assistance while tracking student progress and performance through analytics.",
   tags: [
@@ -149,7 +149,7 @@ const projectsData = [
   githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
   },
   {
-  id: 14,
+  id: 10,
   title: "Chef Buddy - Android Meal Planning App",
   description: "Developed a feature-rich Android application that helps users discover recipes, save favorites, and organize weekly meal plans. Built using Java and MVP architecture, the app integrates with TheMealDB API to provide recipe recommendations, ingredient-based search, meal scheduling, and detailed cooking instructions for a seamless meal-planning experience.",
   tags: [
@@ -167,7 +167,7 @@ const projectsData = [
   githubUrl: "https://github.com/YOUR_USERNAME/Chef-Buddy"
   },
   {
-    id: 5,
+    id: 11,
     title: "Frame Focus Photography",
     description: "A dynamic photography portfolio with an interactive gallery and contact form.",
     tags: ["HTML", "CSS", "Javascript", "React"],
@@ -176,7 +176,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/photography_website"
   },
   {
-    id: 6,
+    id: 12,
     title: "Recipe Management App",
     description: "A full-stack recipe app with real-time search and admin management panel.",
     tags: ["HTML", "CSS", "React", "Typescript", "Python", "Django"],
@@ -185,7 +185,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/chefs-corner"
   },
   {
-    id: 7,
+    id: 13,
     title: "Python Notepad",
     description: "A functional text editor with spell checking and modern GUI.",
     tags: ["Python", "Tkinter", "OOP"],
@@ -194,7 +194,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/Text_Editor"
   },
   {
-    id: 8,
+    id: 14,
     title: "Space Invaders Game",
     description: "A retro-style game with player/enemy interactions, scoring, and sound effects.",
     tags: ["Python", "Pygame", "OOP"],
@@ -203,7 +203,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/SpaceInvader_Game"
   },
   {
-    id: 9,
+    id: 15,
     title: "Classic Portfolio Website",
     description: "A responsive portfolio website built with React.js, HTML, and CSS.",
     tags: ["HTML", "CSS", "React", "JavaScript"],
