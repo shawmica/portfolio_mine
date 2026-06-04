@@ -113,7 +113,7 @@ const SkillsSection = () => {
         >
           <Badge
             onClick={() => setSelectedCategory("all")}
-            className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold border-2 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === "all" ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)] border-primary" : "bg-blue-900/30 text-white border-blue-400 hover:bg-blue-800/40"}`}
+            className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold border-2 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === "all" ? "bg-blue-500 text-white shadow-[0_0_20px_rgba(59,130,246,0.8)] border-blue-300 dark:bg-blue-500 dark:border-blue-300" : "bg-blue-900/30 text-white border-blue-400 hover:bg-blue-800/40"}`}
           >
             All
           </Badge>
@@ -121,7 +121,7 @@ const SkillsSection = () => {
             <Badge
               key={key}
               onClick={() => setSelectedCategory(key as Technology["category"])}
-              className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold border-2 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === key ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)] border-primary" : "bg-blue-900/30 text-white border-blue-400 hover:bg-blue-800/40"}`}
+              className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold border-2 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === key ? "bg-blue-500 text-white shadow-[0_0_20px_rgba(59,130,246,0.8)] border-blue-300 dark:bg-blue-500 dark:border-blue-300" : "bg-blue-900/30 text-white border-blue-400 hover:bg-blue-800/40"}`}
             >
               {label}
             </Badge>
