@@ -113,7 +113,7 @@ const SkillsSection = () => {
         >
           <Badge
             onClick={() => setSelectedCategory("all")}
-            className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === "all" ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)]" : "bg-secondary hover:bg-secondary/80"}`}
+            className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold border-2 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === "all" ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)] border-primary" : "bg-blue-900/30 text-white border-blue-400 hover:bg-blue-800/40"}`}
           >
             All
           </Badge>
@@ -121,7 +121,7 @@ const SkillsSection = () => {
             <Badge
               key={key}
               onClick={() => setSelectedCategory(key as Technology["category"])}
-              className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === key ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)]" : "bg-secondary hover:bg-secondary/80"}`}
+              className={`cursor-pointer text-base px-6 py-2 transition-all duration-200 rounded-full font-semibold border-2 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)] ${selectedCategory === key ? "bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.8)] border-primary" : "bg-blue-900/30 text-white border-blue-400 hover:bg-blue-800/40"}`}
             >
               {label}
             </Badge>
@@ -167,7 +167,7 @@ const SkillsSection = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
                 onClick={() => setShowAll((prev) => !prev)}
-                className="cursor-pointer text-base px-8 py-3 transition-all duration-200 rounded-full font-semibold bg-primary text-white hover:shadow-[0_0_24px_rgba(59,130,246,0.6)] shadow-[0_0_12px_rgba(59,130,246,0.4)]"
+                className="cursor-pointer text-lg px-10 py-3 transition-all duration-200 rounded-full font-bold bg-blue-600 text-white hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] shadow-[0_0_16px_rgba(59,130,246,0.6)] border-2 border-blue-400"
               >
                 {showAll ? "Show Less" : "Read More"}
               </Badge>
