@@ -167,7 +167,7 @@ const SkillsSection = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Badge
                 onClick={() => setShowAll((prev) => !prev)}
-                className="cursor-pointer text-lg px-10 py-3 transition-all duration-200 rounded-full font-bold bg-blue-600 text-white hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] shadow-[0_0_16px_rgba(59,130,246,0.6)] border-2 border-blue-400"
+                className="cursor-pointer text-lg px-10 py-3 transition-all duration-300 rounded-full font-bold bg-blue-600 text-white hover:bg-blue-500 hover:shadow-[0_0_28px_rgba(59,130,246,0.8)] shadow-[0_0_16px_rgba(59,130,246,0.4)] border-2 border-blue-400 hover:border-blue-300"
               >
                 {showAll ? "Show Less" : "Read More"}
               </Badge>

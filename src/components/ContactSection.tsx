@@ -135,7 +135,7 @@ const ContactSection = () => {
                         )}
                       />
                     ))}
-                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 active:scale-95 transition-transform duration-200" disabled={isSubmitting}>
+                    <Button type="submit" className="w-full bg-blue-600 text-white hover:bg-blue-500 font-semibold rounded-lg py-3 transition-all duration-300 shadow-[0_0_16px_rgba(59,130,246,0.4)] hover:shadow-[0_0_24px_rgba(59,130,246,0.8)] border border-blue-400 active:scale-95" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>

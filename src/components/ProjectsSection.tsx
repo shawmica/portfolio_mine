@@ -230,14 +230,14 @@ const ProjectsSection = () => {
                   </CardContent>
 
                   <CardFooter className="flex gap-2">
-                    <Button variant="outline" size="sm" asChild>
+                    <Button variant="outline" size="sm" asChild className="text-blue-500 border-2 border-blue-500 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-[0_0_8px_rgba(59,130,246,0.3)] hover:shadow-[0_0_16px_rgba(59,130,246,0.6)]">
                       <a href={project.demoUrl} target="_blank" rel="noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
                       </a>
                     </Button>
 
-                    <Button variant="outline" size="sm" asChild>
+                    <Button variant="outline" size="sm" asChild className="text-blue-500 border-2 border-blue-500 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-[0_0_8px_rgba(59,130,246,0.3)] hover:shadow-[0_0_16px_rgba(59,130,246,0.6)]">
                       <a href={project.githubUrl} target="_blank" rel="noreferrer">
                         <Github className="h-4 w-4 mr-2" />
                         Code
@@ -254,7 +254,7 @@ const ProjectsSection = () => {
           <Button
             variant="outline"
             onClick={() => setShowAll((prev) => !prev)}
-            className="transition-all duration-200 ease-out hover:shadow-[0_0_24px_rgba(59,130,246,0.45)] hover:border-blue-400 focus-visible:shadow-[0_0_28px_rgba(59,130,246,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="bg-blue-600 text-white hover:bg-blue-500 font-bold rounded-full px-10 py-3 text-lg transition-all duration-300 shadow-[0_0_16px_rgba(59,130,246,0.4)] hover:shadow-[0_0_28px_rgba(59,130,246,0.8)] border-2 border-blue-400 hover:border-blue-300"
           >
             {showAll ? "Show less" : "Read more"}
           </Button>

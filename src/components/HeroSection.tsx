@@ -46,14 +46,14 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Button asChild size="lg" className="hover-scale">
+              <Button asChild size="lg" className="bg-blue-600 text-white hover:bg-blue-500 font-semibold rounded-full px-8 transition-all duration-300 shadow-[0_0_16px_rgba(59,130,246,0.4)] hover:shadow-[0_0_24px_rgba(59,130,246,0.8)] border border-blue-400 hover:border-blue-300">
                 <a href={resumePdf} target="_blank" rel="noopener noreferrer" download>
                   View My Resume
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
 
-              <Button asChild variant="outline" size="lg" className="hover-scale">
+              <Button asChild variant="outline" size="lg" className="text-blue-500 border-2 border-blue-500 hover:bg-blue-600 hover:text-white font-semibold rounded-full px-8 transition-all duration-300 shadow-[0_0_12px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
                 <a href="#contact">Contact Me</a>
               </Button>
             </motion.div>

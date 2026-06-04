@@ -204,7 +204,7 @@ const CertificationsSection = () => {
           <div className="flex justify-center mt-8">
             <Button
               variant="outline"
-              className="border border-blue-500 hover:shadow-[0_0_15px_2px_rgba(59,130,246,0.7)] focus:shadow-[0_0_15px_2px_rgba(59,130,246,0.7)] transition-all"
+              className="bg-blue-600 text-white hover:bg-blue-500 font-bold rounded-full px-10 py-3 text-lg transition-all duration-300 shadow-[0_0_16px_rgba(59,130,246,0.4)] hover:shadow-[0_0_28px_rgba(59,130,246,0.8)] border-2 border-blue-400 hover:border-blue-300"
               onClick={() => setShowAll(!showAll)}
             >
               {showAll ? "Show Less" : "Read More"}
