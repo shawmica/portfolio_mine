@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import profile from '../img/profile1.jpg';
+import resumePdf from '../img/Resume.pdf';
 
 interface HeroSectionProps {
   id?: string;
@@ -46,11 +47,11 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <Button asChild size="lg" className="hover-scale">
-  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-    View My Resume
-    <ArrowRight className="ml-2 h-4 w-4" />
-  </a>
-</Button>
+                <a href={resumePdf} target="_blank" rel="noopener noreferrer" download>
+                  View My Resume
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
 
               <Button asChild variant="outline" size="lg" className="hover-scale">
                 <a href="#contact">Contact Me</a>
