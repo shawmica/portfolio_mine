@@ -254,6 +254,7 @@ const ProjectsSection = () => {
           <Button
             variant="outline"
             onClick={() => setShowAll((prev) => !prev)}
+            className="transition-all duration-200 ease-out hover:shadow-[0_0_24px_rgba(59,130,246,0.45)] hover:border-blue-400 focus-visible:shadow-[0_0_28px_rgba(59,130,246,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {showAll ? "Show less" : "Read more"}
           </Button>
