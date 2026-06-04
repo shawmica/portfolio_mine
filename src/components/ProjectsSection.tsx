@@ -11,10 +11,71 @@ import notepad from '../img/notepad.png';
 import game from '../img/game.png';
 import port from '../img/port.png';
 import port2 from '../img/port2.png';
+import ragAssistant from '../img/ragAssistant.png';
+import gmailClassifier from '../img/gmailClassifier.png';
+import aiStudyCompanion from '../img/aiStudyCompanion.png';
+import gradePrediction from '../img/gradePrediction.png';
+import chefBuddy from '../img/chefBuddy.png';
+import mathly from '../img/mathly.png';
 
 const projectsData = [
   {
-    id: 1,
+  id: 1,
+  title: "Real-Time AI Assistant using RAG",
+  description: "Built an AI-powered document assistant that enables users to upload PDFs and interact with them through natural language conversations using Retrieval-Augmented Generation (RAG). The system leverages semantic search, vector embeddings, ChromaDB, and Groq LLM to generate accurate context-aware responses in real time.",
+  tags: [
+    "Python",
+    "LangChain",
+    "ChromaDB",
+    "FastAPI",
+    "Streamlit",
+    "HuggingFace",
+    "Groq",
+    "RAG",
+    "LLM"
+  ],
+  imageUrl: ragAssistant,
+  demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_built-a-real-time-ai-assistant-using-rag-activity-#########",
+  githubUrl: "https://github.com/shawmica/real-time-rag-ai-assistant"
+  },
+  {
+  id: 13,
+  title: "Student Grade Prediction Model using ANN",
+  description: "Developed an Artificial Neural Network (ANN) model to predict student academic performance based on study behavior, attendance, quiz results, engagement, and assignment completion. The system performs feature engineering and machine learning-based classification to predict final grades (A, B, C, or F), supporting data-driven educational insights.",
+  tags: [
+    "Python",
+    "Artificial Neural Networks",
+    "Machine Learning",
+    "Data Preprocessing",
+    "Feature Engineering",
+    "TensorFlow",
+    "Education Analytics",
+    "AI"
+  ],
+  imageUrl: gradePrediction,
+  demoUrl: "YOUR_LINKEDIN_POST_URL",
+  githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
+  },
+  {
+  id: 11,
+  title: "AI-Powered Gmail Classifier",
+  description: "Developed an intelligent Gmail automation system using Python, MCP (Model Context Protocol), and Claude Desktop. The application securely reads emails through the Gmail API, classifies messages into categories, detects potential phishing and spam emails, automatically labels unread emails, and generates intelligent inbox summaries to improve email management and productivity.",
+  tags: [
+    "Python",
+    "MCP",
+    "Claude Desktop",
+    "Gmail API",
+    "OAuth 2.0",
+    "Google Cloud",
+    "Automation",
+    "AI"
+  ],
+  imageUrl: gmailClassifier,
+  demoUrl: "YOUR_LINKEDIN_POST_URL",
+  githubUrl: "https://github.com/shawmica/gmail-classifier-mcp"
+  },
+  {
+    id: 2,
     title: "Fungal Growth Analysis",
     description: "A 14-day image processing study analyzing black fungi (Hyphae Penta) on coconut flesh using OpenCV and Python.",
     tags: ["OpenCV", "Python", "Matplotlib", "ImageSegmentation"],
@@ -23,7 +84,7 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/Image-Elites"
   },
   {
-    id: 2,
+    id: 3,
     title: "Gesture-Controlled Slides",
     description: "Built a gesture-based slide tool using OpenCV and cvzone’s HandTrackingModule.",
     tags: ["OpenCV", "CvZone", "Python", "HandTrackingModule", "Mediapipe", "ComputerVision"],
@@ -32,7 +93,25 @@ const projectsData = [
     githubUrl: "https://github.com/shawmica/Presentation_with_Gestures"
   },
   {
-    id: 3,
+  id: 15,
+  title: "Mathly - AI Math Solver with Voice Explanations",
+  description: "Developed an AI-powered math solver that reads printed equations using OpenCV and Tesseract OCR, detects variables, solves problems with SymPy, and explains each step clearly through voice explanations in English, Tamil, and Sinhala. The project focuses on making math learning more accessible through AI, OCR, symbolic computation, and multilingual speech support.",
+  tags: [
+    "Python",
+    "OpenCV",
+    "Tesseract OCR",
+    "SymPy",
+    "gTTS",
+    "AI",
+    "OCR",
+    "EdTech"
+  ],
+  imageUrl: mathly,
+  demoUrl: "YOUR_LINKEDIN_POST_URL",
+  githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
+},
+  {
+    id: 4,
     title: "My Portfolio Website",
     description: "Dynamic personal portfolio to showcase my skills, projects, certifications, and professional activities.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn UI"],
@@ -48,6 +127,44 @@ const projectsData = [
     imageUrl: vol,
     demoUrl: "https://www.linkedin.com/posts/shawmica-sivatharan_python-opencv-computervision-activity-7207244949321310209-9vFs",
     githubUrl: "https://github.com/shawmica/HandGesture"
+  },
+  {
+  id: 12,
+  title: "AI Study Companion",
+  description: "Developed a full-stack AI-powered learning platform that transforms PDFs, notes, and study materials into interactive learning experiences. The system generates AI-powered summaries, quizzes, flashcards, and personalized study assistance while tracking student progress and performance through analytics.",
+  tags: [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "SQLite",
+    "OpenAI",
+    "Vite",
+    "AI",
+    "EdTech",
+    "Full Stack"
+  ],
+  imageUrl: aiStudyCompanion,
+  demoUrl: "YOUR_LINKEDIN_POST_URL",
+  githubUrl: "YOUR_GITHUB_REPOSITORY_URL"
+  },
+  {
+  id: 14,
+  title: "Chef Buddy - Android Meal Planning App",
+  description: "Developed a feature-rich Android application that helps users discover recipes, save favorites, and organize weekly meal plans. Built using Java and MVP architecture, the app integrates with TheMealDB API to provide recipe recommendations, ingredient-based search, meal scheduling, and detailed cooking instructions for a seamless meal-planning experience.",
+  tags: [
+    "Java",
+    "Android",
+    "MVP Architecture",
+    "Retrofit",
+    "Room Database",
+    "SQLite",
+    "TheMealDB API",
+    "Material Design"
+  ],
+  imageUrl: chefBuddy,
+  demoUrl: "YOUR_LINKEDIN_POST_URL",
+  githubUrl: "https://github.com/YOUR_USERNAME/Chef-Buddy"
   },
   {
     id: 5,
