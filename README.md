@@ -131,10 +131,8 @@ To personalize the portfolio for your own use:
 |---|---|
 | **GitHub** | [github.com/shawmica](https://github.com/shawmica) |
 | **LinkedIn** | [linkedin.com/in/shawmica-sivatharan](https://www.linkedin.com/in/shawmica-sivatharan) |
-| **Email** | shawmi3030@gmail.com |
+
 
 ---
 
-## License
 
-This project is open source and available for personal and educational use. If you fork or adapt it, attribution is appreciated.
